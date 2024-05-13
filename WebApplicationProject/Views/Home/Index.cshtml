@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>
+    @ViewData["message"]
+</h3>
+
+<p>
+    @ViewData["message"]
+</p>
+
+<p>
+    ViewData["message"]
+</p>
+
+
+<h3>Cities List</h3>
+@if (ViewData["cities"] != null)
+{
+    <ol>
+        @foreach(string item in (IEnumerable<string>)ViewData["cities"])
+        {
+            <li>
+                @item
+            </li>
+        }
+    </ol>
+}

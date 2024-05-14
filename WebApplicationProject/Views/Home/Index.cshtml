@@ -3,6 +3,10 @@
 }
 
 <h3>
+   &copy; @TempData["company"]
+</h3>
+
+<h3>
     @ViewData["message"]
 </h3>
 
@@ -27,3 +31,18 @@
         }
     </ol>
 }
+
+<p>-----------------------------------</p>
+<h3>This is viewbag</h3>
+<p>
+    @ViewBag.Msg
+</p>
+
+<ol>
+    @foreach(string item in ViewBag.Cities)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ol>

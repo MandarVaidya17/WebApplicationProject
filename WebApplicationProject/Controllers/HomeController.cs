@@ -21,15 +21,23 @@ namespace WebApplicationProject.Controllers
                 "Pune","mumbai","Nashik","akole"
             };
             ViewData["cities"]=cities;
+
+            ViewBag.Msg = "This is an example of viewbag";
+            ViewBag.Cities=cities;
+
+            TempData["company"] = "Think Quotient";
+            TempData.Keep("company");
             return View();
         }
 
         public IActionResult Privacy()
         {
+            
             return View();
         }
         public IActionResult AboutUs()
         {
+            string name = TempData["company"].ToString();
             return View();
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "EmployeeDetails";
+}
+
+<h1>EmployeeDetails</h1>
+<form asp-action="EmployeeDetails">
+    
+    <table class="table">
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                @Html.TextBox("name")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                @Html.TextBox("email")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender
+            </td>
+            <td>
+                @Html.RadioButton("gender", "Male") Male
+                @Html.RadioButton("gender", "female") female
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Select City
+            </td>
+            <td>
+                @Html.DropDownList("cities")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Select Department
+            </td>
+            <td>
+                @Html.DropDownList("dept")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Qualification
+            </td>
+            <td>
+                @Html.RadioButton("qulification", "it") BE IT
+                @Html.RadioButton("qulification", "cs") BE CS
+                @Html.RadioButton("qulification", "pg") Post Graduate
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
